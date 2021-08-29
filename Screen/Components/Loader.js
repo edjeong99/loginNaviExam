@@ -3,17 +3,18 @@
 
 // Import React and Component
 import React from 'react';
-import { StyleSheet, View, Modal, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, ActivityIndicator } from 'react-native';
+import Modal from 'modal-enhanced-react-native-web';
 
 const Loader = (props) => {
   const { loading, ...attributes } = props;
-  console.log(loading);
   return (
     <Modal
       transparent={true}
       animationType={'none'}
       visible={loading}
       onRequestClose={() => {
+        Alert.alert('Modal has now been closed.');
         console.log('close modal');
       }}
     >

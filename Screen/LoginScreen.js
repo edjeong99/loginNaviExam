@@ -75,7 +75,13 @@ const LoginScreen = ({ navigation }) => {
     //     setLoading(false);
     //     console.error(error);
     //   });
+    setTimeout(() => {
+      console.log('LOgin Success');
+
+      navigation.replace('DrawerNavigationRoutes');
+    }, 3000);
     console.log('LOgin Success');
+
     navigation.replace('DrawerNavigationRoutes');
   };
 
